@@ -1,0 +1,3 @@
+import xml.etree.ElementTree as xml
+
+#ACA DEFINIREMOS LAS FUNCIONES PARA MANEJAR ARCHIVOS XML

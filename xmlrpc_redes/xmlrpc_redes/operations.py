@@ -1,5 +1,5 @@
 import socket
-import xml.etree.ElementTree as xml
+import utils
 
 class Server:
     my_socket = None
@@ -54,7 +54,7 @@ class Connection:
         self.my_port = port
         self.sv_address = sv_address
         self.sv_port = sv_port
-        
+
     def __getattr__(self, method):
         def wrapper(*args):
             None
