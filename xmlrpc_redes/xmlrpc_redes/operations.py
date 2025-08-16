@@ -45,10 +45,6 @@ class Connection:
         self.sv_port = sv_port
         self.my_socket = socket(AF_INET, SOCK_STREAM)
 
-    def __call__(self, sv_address, sv_port): #SI QUIERE CAMBIAR LA DIRECCION IP O PUERTO DEL SERVIDOR
-        self.sv_address = sv_address
-        self.sv_port = sv_port
-
     def __call__(self, address, port, sv_address, sv_port): #SI QUIERE CAMBIAR LA DIRECCION IP O PUERTO DEL SERVIDOR y SU PROPIA IP O PUERTO
         self.my_address = address
         self.my_port = port
