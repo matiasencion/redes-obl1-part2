@@ -1,0 +1,10 @@
+[build-system]
+requires = ["setuptools>=61.0"] # VER DESPUES!
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmlrpc_redes"
+version = "1.0"
+description = "Biblioteca de XML-RPC creada para el primer Obligatorio de Redes de Computadoras 2025"
+readme = "README.md"
+dependencies = [] # VER DESPUES!
