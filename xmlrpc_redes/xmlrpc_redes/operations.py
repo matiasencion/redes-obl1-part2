@@ -5,7 +5,7 @@ class Server:
     server_welcoming_socket = None
     my_address = None
     my_port = None
-    procedures = {}
+    procedures = {} # es un mapa
     def __init__(self, address, port):
         self.server_welcoming_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
         self.server_welcoming_socket.bind((address, port))
