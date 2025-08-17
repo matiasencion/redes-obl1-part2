@@ -59,7 +59,6 @@ class Connection:
             #TRANSFORMAR XML A RESULTADOS
             #HAY QUE VER SI SE CIERRA LA CONEXION O NO
 
-
 class Client:
     client_socket = None
     my_address = None
