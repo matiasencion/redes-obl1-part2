@@ -28,11 +28,15 @@ class Server:
             print('Conexion establecida con ' + cl_address_port)
             request_in_xml = connection_socket.recv(2048).decode()
             #PROCESAR XML
+
             #EJECUTAR FUNCION CON SUS PARAMETROS
+
             #PASAR A XML
+
             response_in_xml = None
             connection_socket.send(response_in_xml.encode())
             print('Resultado enviado hacia el cliente ' + cl_address_port[0] + ':' + cl_address_port[1])
+            
             connection_socket.close() # NO ES PERSISTENTE?
 
 class Connection:
@@ -50,13 +54,17 @@ class Connection:
 
     def __getattr__(self, method):
         def wrapper(*args): # ESTO NO SE SI ANDA SI XD
+
             #TRANSFORMAR FUNCION Y PARAMETROS A XML
+
             self.request_in_xml = None
             self.client_socket.send(self.request_in_xml.encode())
             print('Procedimiento enviado hacia el servidor ' + self.sv_address + ':' + self.sv_port)
             print('Esperando respuesta...')
             self.response_in_xml = self.client_socket.recv(2048).decode()
+
             #TRANSFORMAR XML A RESULTADOS
+
             #HAY QUE VER SI SE CIERRA LA CONEXION O NO
 
 class Client:
