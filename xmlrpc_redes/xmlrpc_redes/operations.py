@@ -49,7 +49,7 @@ class Connection:
         print('Conexion establecida con ' + self.sv_address + ':' + self.sv_port)
 
     def __getattr__(self, method):
-        def wrapper(*args):
+        def wrapper(*args): # ESTO NO SE SI ANDA SI XD
             #TRANSFORMAR FUNCION Y PARAMETROS A XML
             self.request_in_xml = None
             self.client_socket.send(self.request_in_xml.encode())
